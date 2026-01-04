@@ -1,13 +1,22 @@
 from langchain_community.document_loaders import WebBaseLoader
 
-def load_web_pages(urls: list[str]):
-    loader = WebBaseLoader(web_paths=urls)
-    web_docs=loader.load()
 
-    for doc in web_docs:
-        doc.metadata["source_type"] = "web"
-        doc.metadata["source_name"] = doc.metadata.get("title", "web")
-        doc.metadata["source_id"] = doc.metadata.get("source")
-        doc.metadata.pop("source", None)
+class WebLoader:
 
-        return web_docs
+    def __init__(self,urls: list[str]):
+        if not isinstance(urls, list):
+            raise TypeError("urls must be a list of strings")
+        
+        self.urls=urls
+
+    def load(self):
+        loader = WebBaseLoader(web_paths=self.urls)
+        docs=loader.load()
+
+        for doc in docs:
+            doc.metadata["source_type"] = "web"
+            doc.metadata["source_name"] = doc.metadata.get("title", "web")
+            doc.metadata["source_id"] = doc.metadata.get("source")
+            doc.metadata.pop("source", None)
+
+        return docs

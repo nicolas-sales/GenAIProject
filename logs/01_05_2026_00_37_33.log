@@ -1,0 +1,34 @@
+[2026-01-05 00:37:35,900] 11 langchain_community.utils.user_agent - WARNING - USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-01-05 00:37:35,900] 24 genai_rag - INFO - Starting PDF ingestion from: C:\Users\nico_\Desktop\GenAIProject\data\raw\pdf
+[2026-01-05 00:37:35,900] 29 genai_rag - INFO - Loading PDF: 20241127-bro-guide-ragv4-interactif.pdf
+[2026-01-05 00:37:36,064] 457 pypdf._reader - WARNING - incorrect startxref pointer(1)
+[2026-01-05 00:37:36,089] 457 pypdf._reader - WARNING - parsing for Object Streams
+[2026-01-05 00:37:36,151] 457 pypdf._reader - WARNING - found 0 objects within Object(174,0) whereas 100 expected
+[2026-01-05 00:37:36,153] 457 pypdf._reader - WARNING - found 0 objects within Object(175,0) whereas 100 expected
+[2026-01-05 00:37:36,156] 457 pypdf._reader - WARNING - found 0 objects within Object(176,0) whereas 100 expected
+[2026-01-05 00:37:36,158] 457 pypdf._reader - WARNING - found 0 objects within Object(177,0) whereas 100 expected
+[2026-01-05 00:37:36,161] 457 pypdf._reader - WARNING - found 0 objects within Object(178,0) whereas 100 expected
+[2026-01-05 00:37:36,163] 457 pypdf._reader - WARNING - found 0 objects within Object(179,0) whereas 100 expected
+[2026-01-05 00:37:36,165] 457 pypdf._reader - WARNING - found 0 objects within Object(180,0) whereas 100 expected
+[2026-01-05 00:37:36,167] 457 pypdf._reader - WARNING - found 0 objects within Object(181,0) whereas 100 expected
+[2026-01-05 00:37:36,169] 457 pypdf._reader - WARNING - found 0 objects within Object(182,0) whereas 100 expected
+[2026-01-05 00:37:36,171] 457 pypdf._reader - WARNING - found 0 objects within Object(183,0) whereas 100 expected
+[2026-01-05 00:37:36,174] 457 pypdf._reader - WARNING - found 0 objects within Object(184,0) whereas 100 expected
+[2026-01-05 00:37:36,176] 457 pypdf._reader - WARNING - found 0 objects within Object(185,0) whereas 100 expected
+[2026-01-05 00:37:36,178] 457 pypdf._reader - WARNING - found 0 objects within Object(186,0) whereas 100 expected
+[2026-01-05 00:37:36,181] 457 pypdf._reader - WARNING - found 0 objects within Object(187,0) whereas 100 expected
+[2026-01-05 00:37:36,181] 457 pypdf._reader - WARNING - found 0 objects within Object(188,0) whereas 10 expected
+[2026-01-05 00:37:38,917] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 24
+[2026-01-05 00:37:38,917] 29 genai_rag - INFO - Loading PDF: a-practical-guide-to-building-agents.pdf
+[2026-01-05 00:37:45,544] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 58
+[2026-01-05 00:37:45,544] 29 genai_rag - INFO - Loading PDF: attention.pdf
+[2026-01-05 00:37:46,328] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 73
+[2026-01-05 00:37:46,328] 29 genai_rag - INFO - Loading PDF: gen-ai-handbook-fr.pdf
+[2026-01-05 00:37:47,127] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 110
+[2026-01-05 00:37:47,127] 29 genai_rag - INFO - Loading PDF: Hub-France-IA-Choisir-un-modele-IA-Generative.pdf
+[2026-01-05 00:37:48,739] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 163
+[2026-01-05 00:37:48,739] 29 genai_rag - INFO - Loading PDF: rag-driven-generative-ai.pdf
+[2026-01-05 00:37:52,703] 33 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 656
+[2026-01-05 00:37:52,703] 37 genai_rag - INFO - Staring Web ingestion for 1 URLS
+[2026-01-05 00:37:54,460] 42 genai_rag - INFO - Web ingestion completed. Total Web documents: 657
+[2026-01-05 00:37:54,460] 44 genai_rag - INFO - Total documents ingested: 657
