@@ -1,0 +1,35 @@
+[2026-01-04 15:42:33,274] 11 langchain_community.utils.user_agent - WARNING - USER_AGENT environment variable not set, consider setting it to identify your requests.
+[2026-01-04 15:42:33,276] 23 genai_rag - INFO - Starting PDF ingestion from: C:\Users\nico_\Desktop\GenAIProject\data\raw\pdf
+[2026-01-04 15:42:33,276] 28 genai_rag - INFO - Loading PDF: 20241127-bro-guide-ragv4-interactif.pdf
+[2026-01-04 15:42:33,478] 457 pypdf._reader - WARNING - incorrect startxref pointer(1)
+[2026-01-04 15:42:33,502] 457 pypdf._reader - WARNING - parsing for Object Streams
+[2026-01-04 15:42:33,557] 457 pypdf._reader - WARNING - found 0 objects within Object(174,0) whereas 100 expected
+[2026-01-04 15:42:33,562] 457 pypdf._reader - WARNING - found 0 objects within Object(175,0) whereas 100 expected
+[2026-01-04 15:42:33,566] 457 pypdf._reader - WARNING - found 0 objects within Object(176,0) whereas 100 expected
+[2026-01-04 15:42:33,567] 457 pypdf._reader - WARNING - found 0 objects within Object(177,0) whereas 100 expected
+[2026-01-04 15:42:33,567] 457 pypdf._reader - WARNING - found 0 objects within Object(178,0) whereas 100 expected
+[2026-01-04 15:42:33,567] 457 pypdf._reader - WARNING - found 0 objects within Object(179,0) whereas 100 expected
+[2026-01-04 15:42:33,567] 457 pypdf._reader - WARNING - found 0 objects within Object(180,0) whereas 100 expected
+[2026-01-04 15:42:33,577] 457 pypdf._reader - WARNING - found 0 objects within Object(181,0) whereas 100 expected
+[2026-01-04 15:42:33,577] 457 pypdf._reader - WARNING - found 0 objects within Object(182,0) whereas 100 expected
+[2026-01-04 15:42:33,583] 457 pypdf._reader - WARNING - found 0 objects within Object(183,0) whereas 100 expected
+[2026-01-04 15:42:33,583] 457 pypdf._reader - WARNING - found 0 objects within Object(184,0) whereas 100 expected
+[2026-01-04 15:42:33,588] 457 pypdf._reader - WARNING - found 0 objects within Object(185,0) whereas 100 expected
+[2026-01-04 15:42:33,588] 457 pypdf._reader - WARNING - found 0 objects within Object(186,0) whereas 100 expected
+[2026-01-04 15:42:33,588] 457 pypdf._reader - WARNING - found 0 objects within Object(187,0) whereas 100 expected
+[2026-01-04 15:42:33,588] 457 pypdf._reader - WARNING - found 0 objects within Object(188,0) whereas 10 expected
+[2026-01-04 15:42:36,331] 28 genai_rag - INFO - Loading PDF: a-practical-guide-to-building-agents.pdf
+[2026-01-04 15:42:42,257] 28 genai_rag - INFO - Loading PDF: attention.pdf
+[2026-01-04 15:42:43,087] 28 genai_rag - INFO - Loading PDF: gen-ai-handbook-fr.pdf
+[2026-01-04 15:42:43,894] 28 genai_rag - INFO - Loading PDF: Hub-France-IA-Choisir-un-modele-IA-Generative.pdf
+[2026-01-04 15:42:45,494] 28 genai_rag - INFO - Loading PDF: rag-driven-generative-ai.pdf
+[2026-01-04 15:42:49,398] 32 genai_rag - INFO - PDF ingestion completed. Total PDF documents: 656
+[2026-01-04 15:42:49,398] 37 genai_rag - INFO - Staring Web ingestion for 1 URLS
+[2026-01-04 15:42:50,460] 46 genai_rag - ERROR - Error occured during data ingestion
+[2026-01-04 15:42:50,460] 18 genai_rag - ERROR - Error in script [C:\Users\nico_\Desktop\GenAIProject\src\pipeline\ingestion.py] line [38] message [name 'd' is not defined]
+Traceback (most recent call last):
+  File "C:\Users\nico_\Desktop\GenAIProject\src\pipeline\ingestion.py", line 38, in ingest_documents
+    web_docs = load_web_pages(urls)
+  File "C:\Users\nico_\Desktop\GenAIProject\src\components\loaders\web_loader.py", line 9, in load_web_pages
+    doc.metadata["source_name"] = d.metadata.get("title", "web")
+NameError: name 'd' is not defined
