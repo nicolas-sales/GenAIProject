@@ -18,7 +18,7 @@ class VectorStoreManager:
         self.vectorstore=Chroma.from_documents(documents=documents,embedding=self.embeddings,persist_directory=self.persist_directory,collection_name=self.collection_name)
         # collection = un index vectoriel logique dans Chroma
 
-        self.vectorstore.persist() # # sauvegarde la base vectorielle sur le disque, permet de ne pas les garder qu'en mémoire car au redémarrage du notebook tout est perdu
+        # self.vectorstore.persist() # # sauvegarde la base vectorielle sur le disque, permet de ne pas les garder qu'en mémoire car au redémarrage du notebook tout est perdu
         return self.vectorstore
     
     def load(self):

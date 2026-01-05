@@ -16,9 +16,9 @@ class TextCleaner:
         cleaned_docs = []
 
         for doc in documents:
-            doc.page_content = self.clean(documents.page_content)
+            doc.page_content = self.clean(doc.page_content)
 
-            if len(documents.page_content) > self.min_length:   # enlève pages vides / quasi vides, 80 bon compromis
+            if len(doc.page_content) > self.min_length:   # enlève pages vides / quasi vides, 80 bon compromis
                 cleaned_docs.append(doc)
 
         return cleaned_docs

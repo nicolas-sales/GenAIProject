@@ -10,9 +10,7 @@ src/
 │   │   ├── cleaner.py           # class TextCleaner
 │   │   ├── chunker.py           # class TextChunker
 │   │
-│   ├── embeddings.py            # class EmbeddingProvider
 │   ├── vectorstore.py           # class VectorStoreManager
-│   ├── retriever.py             # class RetrieverFactory
 │   ├── llm.py                   # class LLMProvider
 │   └── rag_engine.py            # class RAGEngine
 │
@@ -20,3 +18,9 @@ src/
 │   ├── ingestion.py             # class IngestionPipeline
 │   ├── build_index.py           # class IndexPipeline
 │   └── rag.py                   # class RAGPipeline
+
+
+
+
+Note: This project uses LangChain 0.2.x for stability.
+Chroma deprecation warnings are expected and safe.

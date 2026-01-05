@@ -1,4 +1,18 @@
+# Virtual environment
 venvproject
 ./venvproject
 
+# Environment variables
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+
+# Chroma vector store
+chroma_db/
