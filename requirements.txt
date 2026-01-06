@@ -25,6 +25,7 @@ wikipedia
 # App / API
 streamlit
 fastapi
+uvicorn
 langserve==0.0.41
 sse-starlette
 
@@ -35,6 +36,3 @@ certifi
 ipykernel
 
 pydantic>=2.6,<3
-
-# App
-streamlit
