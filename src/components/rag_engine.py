@@ -40,4 +40,7 @@ class RagEngine:
             }
         )
 
-        return response.content
+        return {
+            "answer":response.content,
+            "sources":docs
+        }
