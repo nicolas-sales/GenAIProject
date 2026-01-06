@@ -1,9 +1,4 @@
 from pathlib import Path
-
-# Pour streamlit cloud
-if not Path(self.persist_directory).exists():
-    raise RuntimeError("Vector store not found. Please rebuild the index.")
-
 import sys
 
 from src.logger import logger
