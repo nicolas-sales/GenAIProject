@@ -4,6 +4,8 @@ from typing import List # typing Python
 
 from src.pipeline.rag import RagPipeline
 
+# Pydantic valide les données, transforme JSON en objets Python, empêche les erreurs, génère la doc API, rend le backend fiable
+
 # Schema
 
 class AskRequest(BaseModel): # Définit ce que le client doit envoyer
