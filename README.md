@@ -77,42 +77,55 @@ At query time:
 
 ## Project Structure
 
+
 GenAIProject/
 │
-├── app.py # Local Streamlit app (used for prototyping)
-├── requirements.txt # Pinned dependencies
+├── app.py                           # Streamlit prototype (early RAG validation)
+│
+├── api/
+│   └── main.py                      # FastAPI application (RAG API)
+│
+├── frontend/
+│   ├── package.json                 # Frontend dependencies
+│   ├── public/
+│   └── src/
+│       ├── App.js                   # React UI (text + voice interaction)
+│       └── index.js                 # React entry point
+│
+├── requirements.txt                 # Backend Python dependencies
 ├── README.md
 ├── .gitignore
 │
 ├── data/
-│ └── raw/
-│ └── pdf/ # Source PDF documents
+│   └── raw/
+│       └── pdf/                     # Source PDF documents
 │
 ├── src/
-│ ├── init.py
-│ │
-│ ├── logger.py # Centralized logging
-│ ├── exception.py # Custom exception handling
-│ │
-│ ├── components/
-│ │ ├── loaders/
-│ │ │ ├── pdf_loader.py # PDF ingestion
-│ │ │ └── web_loader.py # Web page ingestion
-│ │ │
-│ │ ├── transformers/
-│ │ │ ├── cleaner.py # Text cleaning and filtering
-│ │ │ └── chunker.py # Text chunking
-│ │ │
-│ │ ├── vectorstore.py # Chroma vector store management
-│ │ ├── llm.py # LLM provider abstraction
-│ │ └── rag_engine.py # Retrieval + generation logic
-│ │
-│ └── pipeline/
-│ ├── ingestion.py # Document ingestion pipeline
-│ ├── build_index.py # Cleaning, chunking, embedding, indexing
-│ └── rag.py # Query-time RAG pipeline
+│   ├── __init__.py
+│   │
+│   ├── logger.py                    # Centralized logging
+│   ├── exception.py                 # Custom exception handling
+│   │
+│   ├── components/
+│   │   ├── loaders/
+│   │   │   ├── pdf_loader.py        # PDF document loader
+│   │   │   └── web_loader.py        # Web page loader
+│   │   │
+│   │   ├── transformers/
+│   │   │   ├── cleaner.py           # Text cleaning and filtering
+│   │   │   └── chunker.py           # Document chunking
+│   │   │
+│   │   ├── vectorstore.py           # Chroma vector store manager
+│   │   ├── llm.py                   # LLM abstraction (OpenAI)
+│   │   └── rag_engine.py            # Retrieval + generation logic
+│   │
+│   └── pipeline/
+│       ├── ingestion.py             # PDF & web ingestion pipeline
+│       ├── build_index.py           # Cleaning, chunking, embedding, indexing
+│       └── rag.py                   # Query-time RAG pipeline
 │
-└── chroma_db/ # Vector database (local only, not versioned)
+└── chroma_db/                       # Persisted vector database (local only)
+
 
 
 ---
