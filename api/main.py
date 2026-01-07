@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel # définir des schémas JSON
 from typing import List # typing Python
 
@@ -28,6 +29,17 @@ app = FastAPI(
     title="GenAI RAG API",
     description="RAG backend for GenAI assistant",
     version="1.0.0",
+)
+
+# CORS CONFIGURATION
+
+# Autorise le frontend React (localhost:3000) à appeler l’API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 rag_pipeline = RagPipeline(

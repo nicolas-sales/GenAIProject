@@ -13,7 +13,7 @@ class RagEngine:
                 ("system",
                 "You are an expert AI Engineer."
                 "Answer the question using only the provided context."
-                "If the answer is not in the cintzxt, say 'I don't know'."
+                "If the answer is not in the context, say 'I don't know'."
                 ),
                 (
                 "user",
